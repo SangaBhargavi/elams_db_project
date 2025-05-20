@@ -1,0 +1,45 @@
+//Creating the database 
+
+create database elams_db; 
+
+use elams_db; 
+
+//Creating the table employee 
+
+ CREATE TABLE employee (  
+
+employee_id VARCHAR(6) PRIMARY KEY,  
+
+employee_name VARCHAR(50), 
+
+gender VARCHAR(6),  
+
+email VARCHAR(50),  
+
+password VARCHAR(100), 
+
+contact_number VARCHAR(15),  
+
+manager_id VARCHAR(10),  
+
+role VARCHAR(20), 
+
+ FOREIGN KEY (manager_id) REFERENCES employee(employee_id)); 
+
+//Inserting the values into the table (First you need to insert the value of the manager as the manager id is the foreign key 
+
+INSERT INTO employee (employee_id, employee_name, gender, email, password, contact_number, manager_id, role) VALUES  
+
+('CTS004', 'Ram', 'others', 'ram654@cts.com', 'password', '9347861205', NULL, 'manager'); 
+
+// Inserting the values into the table (Remaining employees)  
+
+INSERT INTO employee (employee_id, employee_name, gender, email, password, contact_number, manager_id, role) VALUES  
+
+('CTS001', 'Vijay', 'male', 'vijay12@cts.com', 'password', '9000489876', 'CTS004', 'employee'), 
+
+('CTS002', 'Sai', 'male', 'sai34@cts.com', 'password', '9912155134', 'CTS004', 'employee'),  
+
+('CTS003', 'Bhargavi', 'female', 'ravi54@cts.com', 'password', '9912155234', 'CTS004', 'employee'),  
+
+('CTS005', 'Arjun', 'female', 'arjun76@cts.com', 'password', '9297102306', 'CTS004', 'employee'); 
