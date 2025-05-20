@@ -43,3 +43,37 @@ INSERT INTO employee (employee_id, employee_name, gender, email, password, conta
 ('CTS003', 'Bhargavi', 'female', 'ravi54@cts.com', 'password', '9912155234', 'CTS004', 'employee'),  
 
 ('CTS005', 'Arjun', 'female', 'arjun76@cts.com', 'password', '9297102306', 'CTS004', 'employee'); 
+
+
+//FOR ATTENDANCE TABLE 
+
+CREATE TABLE attendance ( 
+
+ employee_id VARCHAR(10),  
+
+clock_in DATETIME, 
+
+ clock_out DATETIME,  
+
+work_hours TIME ); 
+
+INSERT INTO attendance (employee_id, clock_in, clock_out, work_hours) VALUES
+('CTS001', '2025-05-14 08:33:00', '2025-05-14 18:30:00', '09:57:00'),  
+
+('CTS002', '2025-05-14 21:30:00', '2025-05-15 06:30:00', '09:00:00'), 
+
+ ('CTS003', '2025-05-14 08:21:00', '2025-05-14 18:45:00', '10:23:26'),  
+
+('CTS004', '2025-05-14 08:25:00', '2025-05-14 19:01:00', '10:35:29'),  
+
+('CTS005', '2025-05-14 08:01:00', '2025-05-18 17:45:00', '09:43:56'),  
+
+('CTS006', '2025-05-14 09:00:00', '2025-05-14 18:00:00', '09:00:00'),  
+
+('CTS007', '2025-05-14 08:45:00', '2025-05-14 17:45:00', '09:00:00'), 
+
+ ('CTS008', '2025-05-14 08:30:00', '2025-05-14 18:30:00', '10:00:00'), 
+
+ ('CTS009', '2025-05-14 08:15:00', '2025-05-14 18:15:00', '10:00:00'),  
+
+('CTS010', '2025-05-14 08:00:00', '2025-05-14 17:30:00', '09:30:00'); 
